@@ -1,0 +1,34 @@
+.foot{
+  position: fixed;
+  bottom: 5px;
+  display: flex;
+  width: 98%;
+  height: 60px;
+  background: #3d424d;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: space-between;
+}.foot>div{
+  background: transparent;
+  margin-left: 10px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+  width: 80%;
+  border: 1.5px solid white;
+}.foot>div>input{
+  border: none;
+  padding-left: 10px;
+  padding-right: 5px;
+  width: 82%;
+  background: transparent;
+  color: white;
+}.send{
+margin-right: 10px;
+color: white;
+}.foot>div>input::placeholder{
+  color: white;
+}.file{
+  display: none;
+}

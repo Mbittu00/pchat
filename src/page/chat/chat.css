@@ -1,0 +1,36 @@
+.foot-holder{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}.chat{
+  background: #282c34;
+  min-height: 100vh;
+}.body-holder{
+  padding-top: 60px;
+  padding-bottom: 70px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.load-holder{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}.load-holder>div{
+  width: 100px;
+  height: 100px;
+  border: 2px solid white;
+}.load-holder>span{
+  margin-top: 80px;
+  font-size: 25px;
+  color: white;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 800;
+}
