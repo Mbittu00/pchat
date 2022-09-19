@@ -46,7 +46,7 @@ export default function Popup(){
   useEffect(()=>{
     socket.on('connect', () => {
   setOpen(true)
-alert(true)
+
 });
   },[socket])
   return (
