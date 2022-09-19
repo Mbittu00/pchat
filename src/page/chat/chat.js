@@ -48,7 +48,7 @@ export default function Popup(){
   setOpen(true)
 console.log(true)
 });
-  },[])
+  },[socket])
   return (
     <>{open?
     <div className='chat'>
