@@ -14,6 +14,14 @@ export default function Popup(){
   let [online,setOnline]=useState([])
   let [open,setOpen]=useState(false)
   let params=useParams()
+  //socket connect
+  useEffect(()=>{
+    socket.on('cnt', (res) => {
+  setOpen(res)
+//alert('Enjoy Your Private Chat App')
+});
+  },[socket])
+  //scroll to bottom
   useEffect(()=>{
     window.scroll({
       top: document.body.offsetHeight,
@@ -43,12 +51,7 @@ export default function Popup(){
     })
   },[])
   //socket connect
-  useEffect(()=>{
-    socket.on('cnt', (res) => {
-  setOpen(res)
-//alert('Enjoy Your Private Chat App')
-});
-  },[socket])
+  
   return (
     <>{!open?
   <div className='load-holder'>
