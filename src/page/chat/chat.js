@@ -46,25 +46,11 @@ export default function Popup(){
   useEffect(()=>{
     socket.on('cnt', (res) => {
   setOpen(res)
-
+//alert('Enjoy Your Private Chat App')
 });
   },[socket])
   return (
-    <>{open?
-    <div className='chat'>
-    <Head online={online}/>
-  <div className='body-holder'>
-{
-  msg.map((e,i)=>(
- <Body key={i} data={e}/>
-  ))
-}
-  </div>
-  <div className='foot-holder'> 
-    <Foot socket={socket} paramsId={params.id}/>
-  </div>
-    </div>
-  :
+    <>{!open?
   <div className='load-holder'>
 <motion.div
 initial={{
@@ -86,6 +72,21 @@ transition={{
 >
 </motion.div>  
 <span>loading...</span>
-  </div>} </>
+  </div>
+  :
+      <div className='chat'>
+    <Head online={online}/>
+  <div className='body-holder'>
+{
+  msg.map((e,i)=>(
+ <Body key={i} data={e}/>
+  ))
+}
+  </div>
+  <div className='foot-holder'> 
+    <Foot socket={socket} paramsId={params.id}/>
+  </div>
+    </div>
+    }</>
     )
 }
