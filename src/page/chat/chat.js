@@ -53,7 +53,7 @@ export default function Popup(){
   //socket connect
   
   return (
-    <>{!open?
+    <>{!online[0]?
   <div className='load-holder'>
 <motion.div
 initial={{
