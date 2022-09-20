@@ -44,8 +44,8 @@ export default function Popup(){
   },[])
   //socket connect
   useEffect(()=>{
-    socket.on('connect', () => {
-  setOpen(true)
+    socket.on('cnt', (res) => {
+  setOpen(res)
 
 });
   },[socket])
